@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mani Consultancy</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #2c3eeb;
+      padding: 10px 20px;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+      flex-wrap: wrap;
+    }
+
+    .nav-logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .nav-links a {
+      margin-left: 15px;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ffcc00;
+    }
+
+    /* Heading */
+    .heading {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bolder;
+      margin-top: 20px;
+      color: #2c3eeb;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .locations {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .location-card {
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .location-card:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+
+    .location-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .location-card h1 {
+      color: #e67e22;
+      font-size: 20px;
+      margin: 15px 0;
+    }
+
+    .hi {
+      padding: 20px;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hi ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    form {
+      padding: 20px;
+      max-width: 500px;
+      margin: 20px auto;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input {
+      padding: 10px;
+      width: 100%;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button[type="submit"] {
+      padding: 12px 24px;
+      background-color: #2c3eeb;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #1a2dd4;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #0d1b2a;
+      color: #ffffff;
+    }
+
+    .footer a {
+      display: block;
+      margin: 5px 0;
+      color: #f0f0f0;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer .whatsapp-button {
+      padding: 10px 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      .heading {
+        font-size: 28px;
+      }
+      .nav-links {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+      }
+       .nav-links a {
+        margin-left: 0;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      .locations {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .location-card {
+        max-width: 350px;
+        margin: 15px;
+      }
+      .footer a {
+        display: inline-block;
+        margin: 0 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">Mani Consultancy</div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="heading" id="home">
+    <h1>Mani Consultancy</h1>
+  </div>
+
+  <div class="locations" id="services">
+    <div class="location-card">
+      <img src="./222689.jpg" alt="Aerial view of Dubai Marina at sunset" />
+      <h1>Dubai</h1>
+    </div>
+
+    <div class="location-card">
+      <img src="./gettyimages-1125194571-1024x576.jpg" alt="The Kuwait Towers against a city skyline" />
+      <h1>Kuwait</h1>
+    </div>
+
+    <div class="location-card">
+      <img src="./222701.jpg" alt="Dubai skyline with the Burj Khalifa at night" />
+      <h1>Dubai</h1>
+    </div>
+  </div>
+
+  <div class="hi" id="about">
+    <strong>🌍 Nursing Jobs Abroad – Consultancy Services</strong><br><br>
+    Are you a qualified nurse looking to work overseas? We help nurses like you secure high-paying jobs in top countries with excellent healthcare systems and career growth opportunities.
+    <ul>
+      <li>✅ Job placements for nurses in countries like the UK, Ireland, Germany, Australia, Canada, UAE, and more</li>
+      <li>✅ Full support with licensing exams (like NCLEX, CBT, OET)</li>
+      <li>✅ Visa & documentation assistance</li>
+      <li>✅ 100% end-to-end guidance</li>
+    </ul>
+    <strong>NO QUALIFICATION REQUIRED – ALL QUALIFICATIONS WELCOME!</strong><br><br>
+    📞 Contact us today to get started! Hurry up!
+  </div>
+
+  <form name="contact" method="POST" data-netlify="true" id="contact">
+    <input type="hidden" name="form-name" value="contact" />
+    <p style="font-size:1.5em; font-weight:bold; text-align:center; margin-top:0;">Get in Touch</p>
+    
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Please enter your name" required>
+
+    <label for="place">Place</label>
+    <input type="text" id="place" name="place" placeholder="Please enter your place" required>
+
+    <label for="phone">Phone</label>
+    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+    <button type="submit">SUBMIT</button>
+  </form>
+
+  <div class="footer">
+    <a href="#">About Us</a>
+    <a href="#">Contact Info: Manikandan</a>
+    <a href="tel:9444702912">Phone Number: 9444702912</a>
+    <a href="#">DESIGNED BY MANIKANDAN (student)</a>
+    <br>
+    <a href="https://wa.me/919444702912" target="_blank" class="whatsapp-button">
+      📲 Contact Us on WhatsApp 24*7
+    </a>
+  </div>
+
+</body>
+</html>
